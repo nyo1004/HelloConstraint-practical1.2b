@@ -1,9 +1,11 @@
-package com.example.practical_2_part_a;
+package com.example.HelloConstraint;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,5 +33,16 @@ public class MainActivity extends AppCompatActivity {
         ++mCount;
         if (mShowCount != null)
             mShowCount.setText(Integer.toString(mCount));
+        final Button btn = (Button)findViewById(R.id.button_zero);
+        btn.setBackgroundColor(Color.BLUE);
     }
+
+    public void zero(View view)
+    {
+        mCount = 0;
+        mShowCount.setText(Integer.toString(mCount));
+        final Button btn = (Button)findViewById(R.id.button_zero);
+        btn.setBackgroundColor(Color.GRAY);
+    }
+
 }
